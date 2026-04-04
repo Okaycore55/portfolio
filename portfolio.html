@@ -10,9 +10,7 @@
     <style>
         .navbar-semi-transparent {
             background-color: rgba(52, 58, 64, 0.8) !important;
-            /* Dark with 80% opacity */
             backdrop-filter: blur(10px);
-            /* Optional: adds blur effect */
         }
         body {
             margin: 0;
@@ -37,13 +35,8 @@
             animation: floating 6s ease-in-out infinite;
         }
         @keyframes floating {
-            0%,
-            100% {
-                transform: translateY(0px);
-            }
-            50% {
-                transform: translateY(-10px);
-            }
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
         }
         .portfolio-card {
             background-color: rgba(255, 255, 255, 0.95);
@@ -86,26 +79,28 @@
 <body>
     <!-- Full page background -->
     <div class="full-page-background floating-animation"></div>
+
     <!-- Navigation -->
+    <!-- FIX: All Django-style URLs replaced with plain .html file links -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark navbar-semi-transparent">
-        <a class="navbar-brand" href="/">Shakti Prasad Sahoo</a>
+        <a class="navbar-brand" href="index.html">Shakti Prasad Sahoo</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
             aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav mr-auto">
-                <li class="nav-item ">
-                    <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html">Home</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="/about">About</a>
+                    <a class="nav-link" href="about.html">About</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="/contact">Contact</a>
+                    <a class="nav-link" href="contact.html">Contact</a>
                 </li>
                 <li class="nav-item active">
-                    <a class="nav-link" href="/portfolio">Portfolio</a>
+                    <a class="nav-link" href="portfolio.html">Portfolio <span class="sr-only">(current)</span></a>
                 </li>
             </ul>
         </div>
@@ -191,8 +186,7 @@
         </div>
     </section>
 
-    <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <!-- Scripts -->
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
         integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
         crossorigin="anonymous"></script>
